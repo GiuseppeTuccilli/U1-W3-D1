@@ -266,10 +266,23 @@ movies.filter((e) => {
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
+let yearSum = movies.reduce((s, e) => {
+  let n = Number(e.Year);
+  return s + n;
+});
+
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+const findMovie = function (a) {
+  return movies.find((e) => (e.imdbID = a));
+};
 
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
+const indFinder = function (ar, y) {
+  return ar.findIndex((e) => (e.Year = y));
+};
+console.log(Number(movies[1].Year));
