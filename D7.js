@@ -283,5 +283,7 @@ const findMovie = function (a) {
 */
 
 const indFinder = function (ar, y) {
-  return ar.findIndex((e) => e.Year === y);
+  return ar.findIndex((e) => Number(e.Year) === y);
 };
+
+console.log(indFinder(movies, 2019));
