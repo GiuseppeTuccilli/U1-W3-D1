@@ -283,6 +283,5 @@ const findMovie = function (a) {
 */
 
 const indFinder = function (ar, y) {
-  return ar.findIndex((e) => (e.Year = y));
+  return ar.findIndex((e) => e.Year === y);
 };
-console.log(Number(movies[1].Year));
